@@ -1,0 +1,13 @@
+// Este script es un ejemplo de cómo podrías añadir interactividad.
+document.addEventListener('DOMContentLoaded', () => {
+    // Scroll suave para la navegación
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    console.log("Página de Pablo Neruda cargada. ¡Bienvenido!");
+});
